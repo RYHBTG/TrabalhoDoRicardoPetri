@@ -1,2 +1,2 @@
 # TrabalhoDoRicardoPetri
-Alunos: Héberton Santiago, Luiga Pasto, Nicolas Veado
+Alunos: Héberton Santiago, Luigi Castoldi, Nicolas Doirado
