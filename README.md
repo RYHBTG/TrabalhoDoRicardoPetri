@@ -1,2 +1,2 @@
 # TrabalhoDoRicardoPetri
-Alunos: Héberton Santiago, Luigi Castoldi, Nicolas Doirado
+Alunos: Héberton Santiago Gonçalves Dias Rodrigues, Luigi Castoldi, Nicolas Doirado
