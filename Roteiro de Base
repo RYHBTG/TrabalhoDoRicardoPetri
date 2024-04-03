@@ -1,0 +1,88 @@
+Roteiro Héberton: 
+Estes métodos abstrados são "levados", por assim dizer, até as classes concretas, a primeira para delas são nas classes: 
+Professor, Aluno e Coordenador, Após isso essas classes tem seus métodos levados até a Classe "Service" de cada uma e após isso
+vão para a Classe Controladora
+Cada uma das classes tem seus métodos únicos, contudo também tem coisas em comum que são herdados da classe abstrata, e no caso de coordenador, dos professores.
+Na classe professores temos os métodos: 
+
+Construtores:
+public Professor(): É o construtor padrão da classe.
+public Professor(String nome, String cpf, String idade, double salario, String materia): 
+É um construtor sobrecarregado que aceita parâmetros para inicializar todos os atributos da classe.
+
+Métodos Getters e Setters:
+public Long getId(): Retorna o ID do professor.
+public void setId(Long id): Define o ID do professor.
+public double getSalario(): Retorna o salário do professor.
+public void setSalario(double salario): Define o salário do professor.
+public String getMateria(): Retorna a matéria que o professor leciona.
+public void setMateria(String materia): Define a matéria que o professor leciona.
+
+Na classe Coordenador temos os métodos:
+
+Atributos:
+private String senha: Representa a senha do coordenador.
+private int numProfGerenciados: Representa o número de professores gerenciados pelo coordenador.
+
+Construtores:
+public Coordenador(): É o construtor padrão da classe.
+public Coordenador(String nome, String cpf, String idade, double salario, String senha, String materia): 
+É um construtor sobrecarregado que aceita parâmetros para inicializar todos os atributos da classe, 
+incluindo os herdados da classe Professor e a senha específica do coordenador.
+
+Métodos Getters e Setters:
+public String getSenha(): Retorna a senha do coordenador.
+public void setSenha(String senha): Define a senha do coordenador.
+
+Na classe Alunos temos os métodos:
+
+Atributos:
+private Long matricula: Representa a matrícula do aluno.
+private String turma: Representa a turma em que o aluno está matriculado.
+
+Construtores:
+public Aluno(): É o construtor padrão da classe.
+public Aluno(String nome, String cpf, String idade, Long matricula, String turma): 
+É um construtor sobrecarregado que aceita parâmetros para inicializar todos os atributos da classe, incluindo os herdados da classe Pessoa e a matrícula e turma específicas do aluno.
+
+Métodos Getters e Setters:
+public Long getMatricula(): Retorna a matrícula do aluno.
+public void setMatricula(Long matricula): Define a matrícula do aluno.
+public String getTurma(): Retorna a turma do aluno.
+public void setTurma(String turma): Define a turma do aluno.
+
+Na área de serviço cada classe tem sua funcionalidade, contudo , antes da informação ser inserida nas tabelas, ela passa pelo service,
+para os professor os serviços são:
+Listar (que traz todos os professores criados)
+Criar (que cria um novo professor)
+Atualizar (que altera todo ou apenas uma parte do que foi registrado pra um professor existente)
+Deletar (que remove um professor por id)
+Quantidade (que contabiliza quantos professores existem na tabela e traz um resultado númerico do total)
+Para o caso dos alunos eles seguem o mesmo padrão dos professores tendo apenas a adição do método de Listar Por Turma
+
+E no caso do coordenador ele tem as seguintes funções:
+Listar, Criar, Deletar e Atualizar
+
+Dentro das classes Controller, existem métodos idênticos, contudo cada um fazendo sua função para classes diferentes:
+Na classe professor e aluno, temos os seguintes métodos:
+Listar (alunos ou professores, depende do que é requisitado)
+Criar (insere o que foi criado na lista)
+Buscar por ID (auto explicativo)
+Quantidade (Quantos professores ou alunos foram criados)
+Deletar (Remove um dos dados das tabelas pelo id, ou matricula no caso do aluno)
+
+A classe coordenador no entanto possui 2 classes por diferença pois todo coordenador é um professor mas nem todo professor é coordenador
+portanto possui apenas:
+Criar e Listar
+
+
+
+
+
+
+
+
+
+
+
+
