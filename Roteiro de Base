@@ -1,7 +1,8 @@
 Roteiro Héberton: 
-Estes métodos abstrados são "levados", por assim dizer, até as classes concretas, a primeira para delas são nas classes: 
+Estes métodos abstrados são "levados", por assim dizer, até as classes concretas, a primeira para delas são nas classes modelo: 
 Professor, Aluno e Coordenador, Após isso essas classes tem seus métodos levados até a Classe "Service" de cada uma e após isso
-vão para a Classe Controladora
+vão para a Classe Controladora, cada classe tem seu próprio serviço e controle, nenhuma "invade" a outra, mas existe um caso aonde uma utiliza de outra e realiza apenas
+dois serviços diferentes
 Cada uma das classes tem seus métodos únicos, contudo também tem coisas em comum que são herdados da classe abstrata, e no caso de coordenador, dos professores.
 Na classe professores temos os métodos: 
 
@@ -46,7 +47,7 @@ Buscar por ID (auto explicativo)
 Quantidade (Quantos professores ou alunos foram criados)
 Deletar (Remove um dos dados das tabelas pelo id, ou matricula no caso do aluno)
 
-A classe coordenador no entanto possui 2 classes por diferença pois todo coordenador é um professor mas nem todo professor é coordenador
+A classe coordenador no entanto possui 2 métodos, pois todo coordenador é um professor mas nem todo professor é coordenador
 portanto possui apenas:
 Criar e Listar
 
